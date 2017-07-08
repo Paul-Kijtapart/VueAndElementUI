@@ -1,23 +1,46 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+  <div>
+    <el-row>
+      <el-col :span="24">
+        <item-menu></item-menu>
+      </el-col>
+    </el-row>
+    <el-row>
+      <el-col :span="24">
+        <el-button>Default Button</el-button>
+        <el-button type="primary">Primary Button</el-button>
+        <el-button type="text">Text Button</el-button>
+      </el-col>
+    </el-row>
   </div>
 </template>
-
 <script>
-export default {
-  name: 'app'
-}
-</script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  // App Components
+  import ItemMenu from './components/ItemMenu.vue'
+
+  export default {
+    components: {
+      ItemMenu
+    },
+    data () {
+      return {
+        form: {
+          name: '',
+          region: '',
+          date1: '',
+          date2: '',
+          delivery: false,
+          type: [],
+          resource: '',
+          desc: ''
+        }
+      }
+    },
+    methods: {
+      onSubmit () {
+        console.log('submit!!')
+      }
+    }
+  }
+</script>
