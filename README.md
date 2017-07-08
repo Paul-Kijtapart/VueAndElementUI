@@ -1,6 +1,6 @@
-# scan-vancouver-client
+# Play With ElementUI
 
-> scan-vancouver app client
+> Play With ElementUI
 
 ## Build Setup
 
